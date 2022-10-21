@@ -3,7 +3,7 @@
 ### Prerequisites
 
 - [Python](https://www.python.org/)
-- [Docker](https://www.docker.com/)
+<!-- - [Docker](https://www.docker.com/) -->
 
 ### Installation
 
