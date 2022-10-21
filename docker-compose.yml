@@ -1,0 +1,12 @@
+version: '3.9'
+services: 
+
+  # Builds application server docker image
+  django_plus: 
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    container_name: django_plus
+    ports:
+      - 80:8000
+    restart: on-failure
