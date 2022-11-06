@@ -11,4 +11,4 @@ def pull_db():
 def push_db(key, value):
     key_, value_ = urllib.parse.quote(key), urllib.parse.quote(value)
     r = requests.get(f"https://baleygr.lgf2111.repl.co/push?key={key_}&value={value_}")
-    return r.status_code == 200
+    print("Success" if r.status_code == 200 else "Failed")
