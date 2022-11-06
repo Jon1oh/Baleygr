@@ -46,5 +46,6 @@ if __name__ == "__main__":
     for t in t_ls:
         t.join()
 
+
     # valid_urls = [generate_urls(url) for url in urls]
     # print(valid_urls)
