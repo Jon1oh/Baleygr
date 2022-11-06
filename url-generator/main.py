@@ -20,16 +20,7 @@ def generate_urls(url):
         for ext in exts:
             counter += 1
             url_ = url.replace(url[-7:-1], ext)
-            try:
-                response = requests.get(url_)
-                if response.status_code == 200:
-                    with open(__file__.replace("main.py", "urls.txt"), "a") as f:
-                        f.write(url_ + "\n")
-                    urls.append(url_)
-                    print("Success: " + str(counter) + " URL: " + url_)
-
-            except:
-                print("Error: "  + str(counter) + " URL: " + url_)
+            check_urls(url_)
 
 
 def generate_urls_t(url, output):
