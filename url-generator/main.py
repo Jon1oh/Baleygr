@@ -1,5 +1,6 @@
 import requests
 from threading import Thread
+from db import db, push_db, pull_db
 
 
 def generate_urls(url):
@@ -9,16 +10,19 @@ def generate_urls(url):
     if url.endswith("gov.sg/"):
         for ext in exts:
             url_ = url.replace("gov.sg", ext)
-            counter += 1
-            try:
-                response = requests.get(url_)
-                if response.status_code == 200:
-                    with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
-                        f.write(url_ + "\n")
-                    urls.append(url_)
-                    print("Success: " + str(counter) + url_)
-            except:
-                print("Error: " + str(counter) + " URL: " + url_)
+            pull_db()
+            if url_ not in db["urls"]:
+                counter += 1
+                try:
+                    response = requests.get(url_)
+                    if response.status_code == 200:
+                        push_db("urls", url_)
+                        # with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
+                        #     f.write(url_ + "\n")
+                        # urls.append(url_)
+                        print("Success: " + str(counter) + url_)
+                except:
+                    print("Error: " + str(counter) + " URL: " + url_)
 
         if url.endswith("edu.sg/"):
             for ext in exts:
@@ -47,6 +51,7 @@ def generate_urls(url):
                         print("Success: " + str(counter) + url_)
                 except:
                     print("Error: " + str(counter) + " URL: " + url_)
+
 
 def generate_urls_t(url, output):
     output.append(generate_urls(url))
