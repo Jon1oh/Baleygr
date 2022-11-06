@@ -6,7 +6,7 @@ def generate_urls(url):
     urls = []
     global counter
     counter = 0
-    if url.endswith("gov.sg/") or url.endswith("edu.sg/") or url.endswith("com.sg/"):
+    if url.endswith("gov.sg/"):
         for ext in exts:
             url_ = url.replace("gov.sg", ext)
             counter += 1
@@ -20,6 +20,33 @@ def generate_urls(url):
             except:
                 print("Error: " + str(counter) + " URL: " + url_)
 
+        if url.endswith("edu.sg/"):
+            for ext in exts:
+                url_ = url.replace("edu.sg", ext)
+                counter += 1
+                try:
+                    response = requests.get(url_)
+                    if response.status_code == 200:
+                        with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
+                            f.write(url_ + "\n")
+                        urls.append(url_)
+                        print("Success: " + str(counter) + url_)
+                except:
+                    print("Error: " + str(counter) + " URL: " + url_)
+
+        if url.endswith("com.sg/"):
+            for ext in exts:
+                url_ = url.replace("com.sg", ext)
+                counter += 1
+                try:
+                    response = requests.get(url_)
+                    if response.status_code == 200:
+                        with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
+                            f.write(url_ + "\n")
+                        urls.append(url_)
+                        print("Success: " + str(counter) + url_)
+                except:
+                    print("Error: " + str(counter) + " URL: " + url_)
 
 def generate_urls_t(url, output):
     output.append(generate_urls(url))
