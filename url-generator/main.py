@@ -4,17 +4,21 @@ from threading import Thread
 
 def generate_urls(url):
     urls = []
-    if url.endswith("gov.sg/"):
+    global counter
+    counter = 0
+    if url.endswith("gov.sg/") or url.endswith("edu.sg/") or url.endswith("com.sg/"):
         for ext in exts:
             url_ = url.replace("gov.sg", ext)
+            counter += 1
             try:
                 response = requests.get(url_)
                 if response.status_code == 200:
-                    with open(__file__.replace("main.py", "urls.txt"), "a") as f:
+                    with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
                         f.write(url_ + "\n")
                     urls.append(url_)
+                    print("Success: " + str(counter) + url_)
             except:
-                print("Error: " + url_)
+                print("Error: " + str(counter) + " URL: " + url_)
 
 
 def generate_urls_t(url, output):
