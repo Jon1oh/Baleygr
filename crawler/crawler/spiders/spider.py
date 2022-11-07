@@ -1,13 +1,10 @@
 import scrapy
+from db import pull_db, push_db, db
 
 class PostsSpider(scrapy.Spider):
     name = 'posts'
-
-    start_urls = [
-        'https://equinox-windflower-582.notion.site/singapore-sucks-706401cda27248b483c318f6f46b37a0',
-        'https://equinox-windflower-582.notion.site/PAP-is-a-dictatorship-bc394f2585e047a89f89f465d241d5a0',        
-        
-    ]
+    pull_db()
+    urls = db['urls']
 
     def parse(self, response):
         page = response.url.split('/')[-1]

@@ -29,7 +29,7 @@ pip install bs4
 For the usage of this program, the main URL should be given in the first phrasing,
 Then BeauitfulSoup will be used to retrieve the content of the given URL page.
 The program will then scrape the content for any URL links, before depositing the links onto
-the included .JSON file.
+the included .JSON file. 
 
 
 
