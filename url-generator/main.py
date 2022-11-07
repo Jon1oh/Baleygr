@@ -2,6 +2,16 @@ import requests
 from threading import Thread
 from db import db, push_db, pull_db
 
+def check_urls(url_):
+    try:
+        response = requests.get(url_)
+        if response.status_code == 200:
+            with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
+                f.write(url_ + "\n")
+            urls.append(url_)
+            print("Success: " + str(counter) + url_)
+    except:
+        print("Error: " + str(counter) + " URL: " + url_)
 
 def check_urls(url_):
     try:
