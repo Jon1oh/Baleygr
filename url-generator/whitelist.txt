@@ -27,7 +27,6 @@ http://www.dsta.gov.sg/
 https://www.edb.gov.sg/
 http://www.ema.gov.sg/
 http://www.gra.gov.sg/
-http://www.hpb.gov.sg/
 http://www.hsa.gov.sg/
 http://www.htx.gov.sg/
 http://www.hlb.gov.sg/
