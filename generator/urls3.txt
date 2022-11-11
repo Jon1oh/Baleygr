@@ -192,3 +192,16 @@ http://www.hsa.app/
 http://www.lta.app/
 http://www.rp.app/
 http://www.mci.ao/
+http://www.moh.app/
+http://www.ago.app/
+http://www.np.app/
+http://www.ema.amsterdam/
+http://www.parliament.ar/
+http://www.ura.app/
+http://www.boa.app/
+http://www.mot.app/
+http://www.mas.ao/
+http://www.sla.app/
+https://www.cpf.ar/
+https://www.cabinet.archi/
+http://www.ite.ar/
