@@ -4,7 +4,7 @@ import random
 
 DIRNAME = os.path.dirname(__file__)
 DB_PATH = os.path.join(DIRNAME, "db.json")
-SS_PATH = os.path.join(DIRNAME, "..", "source", "screenshots")
+SS_PATH = os.path.join(DIRNAME, "..", "resources", "screenshots")
 
 try:
     with open(DB_PATH) as f:
