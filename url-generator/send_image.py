@@ -1,9 +1,15 @@
-from azure.storage.blob import BlobClient
-import time
+import boto3, os
 
-blob = BlobClient.from_connection_string(conn_str="DefaultEndpointsProtocol=https;AccountName=urls;AccountKey=pQakwxv1mG9495upsjqgk+wRHWWp6u9+kO9Yw+wIEHxK10jRZvYX0ZXuSYZM+SEpDIE6rvcR1PVy+ASt+rfDCQ==;EndpointSuffix=core.windows.net", container_name="images", blob_name="images")
-folder = './greylist_screenshots'
-blob.upload_blob(folder, overwrite=True)
+client = boto3.client('s3', aws_access_key_id='AKIA5OX2ETWHVMCTJF5F'
+                          ,aws_secret_access_key='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')
 
+os.chdir('url-generator\whitelist_screenshots')
 
+for file in os.listdir():
+    print(file)
+    if '.png' in file:
+        upload_file_bucket = 'sagemaker-studio-9iyt1u3aar'
+        upload_file_key = 'whitelist/' + str(file)
+        client.upload_file(file, upload_file_bucket, upload_file_key)
 
+print('Transfer complete')
