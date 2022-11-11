@@ -187,3 +187,8 @@ http://www.psc.ao/
 https://www.cabinet.app/
 http://www.a-star.app/
 http://www.mas.amsterdam/
+http://www.mof.app/
+http://www.hsa.app/
+http://www.lta.app/
+http://www.rp.app/
+http://www.mci.ao/
