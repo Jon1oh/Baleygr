@@ -1,17 +1,20 @@
 import os
 import json
 import random
+from urllib.parse import unquote
 
-DIRNAME = os.path.dirname(__file__)
-DB_PATH = os.path.join(DIRNAME, "db.json")
-SS_PATH = os.path.join(DIRNAME, "..", "resources", "screenshots")
+SRC_PATH = os.path.join(os.path.dirname(__file__), "..", "resources")
+RES_PATH = os.path.join(SRC_PATH, "results.json")
+SS_PATH = os.path.join(SRC_PATH, "screenshots")
 
 try:
-    with open(DB_PATH) as f:
+    with open(RES_PATH) as f:
         db = json.load(f)
+    urls = sum([_ for _ in db.values()], [])
+
 except FileNotFoundError:
-    db = {}
-    with open(DB_PATH, "w") as f:
+    db, urls = {}, []
+    with open(RES_PATH, "w") as f:
         json.dump(db, f, indent=4)
 
 categories = [
@@ -31,8 +34,10 @@ for category in categories:
         db[category] = []
 
 for fn in os.listdir(SS_PATH):
-    category = random.choice(categories)
-    db[category].append(fn)
+    url = unquote(fn.replace(".png", ""))
+    if url not in urls:
+        category = random.choice(categories)
+        db[category].append(url)
 
-with open(DB_PATH, "w") as f:
+with open(RES_PATH, "w") as f:
     json.dump(db, f, indent=4)

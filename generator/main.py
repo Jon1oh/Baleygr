@@ -1,62 +1,52 @@
 import requests
 from threading import Thread
-from db import db, push_db, pull_db
+import os
 
-def check_urls(url_):
-    try:
-        response = requests.get(url_)
-        if response.status_code == 200:
-            with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
-                f.write(url_ + "\n")
-            urls.append(url_)
-            print("Success: " + str(counter) + url_)
-    except:
-        print("Error: " + str(counter) + " URL: " + url_)
 
-def check_urls(url_):
+def check_urls(url):
     try:
-        response = requests.get(url_)
+        response = requests.get(url)
         if response.status_code == 200:
-            with open(__file__.replace("main.py", "urls3.txt"), "a") as f:
-                f.write(url_ + "\n")
-            urls.append(url_)
-            print("Success: " + str(counter) + url_)
+            with open(URL_PATH, "a") as f:
+                f.write(url + "\n")
+            urls.append(url)
+            print(f"{counter} (PASS). {url}")
     except:
-        print("Error: " + str(counter) + " URL: " + url_)
+        print(f"{counter} (FAIL). {url}")
+
 
 def generate_urls(url):
-    urls = []
     global counter
-    counter = 0
-    if url.endswith("gov.sg/") or url.endswith("edu.sg/") or url.endswith("com.sg/"):
-        for ext in exts:
-            counter += 1
-            url_ = url.replace(url[-7:-1], ext)
-            check_urls(url_)
+    for ext in exts:
+        counter += 1
+        url_ = url.replace(url[-7:-1], ext)
+        check_urls(url_)
 
 
-def generate_urls_t(url, output):
+def generate_urls_thread(url, output):
     output.append(generate_urls(url))
 
 
 if __name__ == "__main__":
-    with open(__file__.replace("main.py", "DN_extensions.txt"), "r") as f:
+    SRC_PATH = os.path.join(os.path.dirname(__file__), "..", "resources")
+    SDM_PATH = os.path.join(SRC_PATH, "subdomains-10000.txt")
+    GOV_PATH = os.path.join(SRC_PATH, "gov-urls.txt")
+    URL_PATH = os.path.join(SRC_PATH, "urls.txt")
+
+    with open(SDM_PATH, "r") as f:
         exts = f.read().splitlines()
 
-    with open(__file__.replace("main.py", "whitelist.txt"), "r") as f:
+    with open(GOV_PATH, "r") as f:
         urls = f.read().splitlines()
 
-    t_ls = []
-    valid_urls = []
-    for url in urls:
-        t = Thread(target=generate_urls_t, args=(url, valid_urls))
-        t_ls.append(t)
+    thread_list, valid_urls, counter = [], [], 0
 
-    for t in t_ls:
+    for url in urls:
+        t = Thread(target=generate_urls_thread, args=(url, valid_urls))
+        thread_list.append(t)
+
+    for t in thread_list:
         t.start()
 
-    for t in t_ls:
+    for t in thread_list:
         t.join()
-        
-    # valid_urls = [generate_urls(url) for url in urls]
-    # print(valid_urls)

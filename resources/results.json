@@ -1,0 +1,35 @@
+{
+    "Safe": [
+        "http://www.nlb.dev/",
+        "http://www.boa.news/"
+    ],
+    "Offensive Content": [
+        "https://www.pmo.dev/",
+        "http://www.ema.support/"
+    ],
+    "Cyber Malicious": [
+        "http://www.ite.support/"
+    ],
+    "Scam / Phishing": [
+        "http://www.mti.news/",
+        "http://www.moh.news/"
+    ],
+    "Potentially Illegal Activity": [
+        "http://www.hsa.dev/",
+        "http://www.mas.news/",
+        "http://www.ema.dev/",
+        "http://www.boa.mx/"
+    ],
+    "Hate Speech": [
+        "http://www.moh.dev/"
+    ],
+    "Violence": [
+        "http://www.mnd.news/",
+        "http://www.hsa.news/",
+        "http://www.nlb.news/"
+    ],
+    "Sexual Content": [],
+    "Other": [
+        "http://www.boa.support/"
+    ]
+}
