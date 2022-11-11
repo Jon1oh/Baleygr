@@ -1,0 +1,90 @@
+{
+    "Safe": [
+        "http://www.nlb.dev/",
+        "http://www.boa.news/",
+        "http://www.jtc.email/",
+        "http://www.mfa.support/",
+        "http://www.htx.news/",
+        "http://www.sla.mx/",
+        "http://www.dsta.mx/",
+        "http://www.mas.support/"
+    ],
+    "Offensive Content": [
+        "https://www.pmo.dev/",
+        "http://www.ema.support/",
+        "http://www.np.media/",
+        "http://www.ptc.support/",
+        "http://www.pa.dev/",
+        "http://www.caas.mx/",
+        "http://www.mpa.email/"
+    ],
+    "Cyber Malicious": [
+        "http://www.ite.support/",
+        "http://www.nyp.mx/",
+        "https://www.sac.mx/",
+        "http://www.parliament.shop/",
+        "http://www.mom.shop/",
+        "http://www.ipos.shop/",
+        "http://www.pa.support/",
+        "http://www.pub.dev/"
+    ],
+    "Scam / Phishing": [
+        "http://www.mti.news/",
+        "http://www.moh.news/",
+        "http://www.hlb.email/",
+        "http://www.mti.mx/",
+        "http://www.tp.news/",
+        "http://www.sfa.wiki/",
+        "http://www.mom.mx/",
+        "http://www.msf.mx/",
+        "http://www.hdb.mx/",
+        "http://www.imda.mx/"
+    ],
+    "Potentially Illegal Activity": [
+        "http://www.hsa.dev/",
+        "http://www.mas.news/",
+        "http://www.ema.dev/",
+        "http://www.boa.mx/",
+        "http://www.ago.mx/",
+        "http://www.ipos.support/",
+        "http://www.jtc.news/",
+        "http://www.mom.news/",
+        "http://www.gra.mx/",
+        "http://www.sfa.news/",
+        "http://www.sp.support/",
+        "http://www.sla.support/"
+    ],
+    "Hate Speech": [
+        "http://www.moh.dev/",
+        "https://www.edb.mx/",
+        "http://www.bca.mx/",
+        "http://www.mti.support/",
+        "http://www.mpa.mx/",
+        "http://www.mha.news/",
+        "http://www.bca.news/",
+        "http://www.iseas.shop/"
+    ],
+    "Violence": [
+        "http://www.mnd.news/",
+        "http://www.hsa.news/",
+        "http://www.nlb.news/",
+        "http://www.hlb.wiki/",
+        "http://www.rp.dev/",
+        "http://www.hpb.email/",
+        "http://www.science.blog/",
+        "http://www.sp.dev/"
+    ],
+    "Sexual Content": [
+        "http://www.mfa.mx/",
+        "http://www.mha.mx/",
+        "http://www.ipos.mx/",
+        "http://www.nhb.media/",
+        "http://www.ptc.news/",
+        "http://www.sfa.wiki/"
+    ],
+    "Other": [
+        "http://www.boa.support/",
+        "http://www.boa.media/",
+        "http://www.science.dev/"
+    ]
+}
