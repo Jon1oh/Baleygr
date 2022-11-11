@@ -19,6 +19,7 @@ ROUTES = [
     "public-services",
     "spokespersons",
 ]
+#This is used to view the different pages with urls linking to websites from organizations deployed with the Singaporee Government
 
 with open(GOV_URL, "w") as f:
     counter = 0

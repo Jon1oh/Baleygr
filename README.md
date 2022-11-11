@@ -1,7 +1,7 @@
 
 # Project Name
 
-Baleygr
+The name of our projcet is Baleygr
 
 # Project Description
 
@@ -10,29 +10,44 @@ and take down phishing sites acting as authorities of the
 Singapore Government. This will be done by efficiently and cost effectively crawling, scraping
 and taking screenshots of URLs at scale to handle more than 1 million pages / day on a continuous basis.
 
+# Technology
+
+In this project, our team has stuck to the use of Python as our main development language.\
+Hence this project is built with Python 3.10.8
+
 # Installation
 
 For the use of this program, the required modules include:
 
-1. requests
-
-2. bs4
+1. os
+2. glob
+3. json
+4. time
+5. random
+6. selenium
 
 ```python
-pip install requests
+pip install os
 
-pip install bs4
+pip install glob
+
+pip install json
+
+pip install time
+
+pip install random
+
+pip install selenium
 ```
 
 # Usage
 
-For the usage of this program, the main URL should be given in the first phrasing,
-Then BeauitfulSoup will be used to retrieve the content of the given URL page.
-The program will then scrape the content for any URL links, before depositing the links onto
-the included .JSON file. 
+For the usage of our progam, the first step would be to generate the urls that are associated with governmental organizations. This is executed with the use of the gov_gen.py file.
 
+The second step would be to generate the different possible malicious sites that might be attempting to replicate sites under the jurisdiction and usage of the Singapore Government. This done through the use of generator.py python file.
 
+The third step would be to obtain the screenshots of sites that have been identified as malicious. This is done through the crawler.py file. 
 
-
+The final step in the program would be to classify the screenshots that are obtained into different categories. This action is performed ith the classifier.py file.
 
 

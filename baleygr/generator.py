@@ -15,6 +15,8 @@ def check_urls(url):
     except:
         logging.info(f"{counter} (FAIL). {url}")
 
+#This set of code is designed to test if the website that is being used can be reached and if so, it will be marked as a pass.
+
 
 def generate_urls(url):
     global counter
@@ -23,10 +25,12 @@ def generate_urls(url):
         url_ = url.replace(url[-7:-1], ext)
         check_urls(url_)
 
+#This set of code is designed to replace the gov.sg extension in the official urls of sites.
 
 def generate_urls_thread(url, output):
     output.append(generate_urls(url))
 
+#This set of code is designed to add urls that have been created by the general_urls function to output.
 
 def check_single():
     with open(URL_PATH, "r") as f:
@@ -34,7 +38,7 @@ def check_single():
     with open(URL_PATH, "w") as f:
         for url in urls:
             f.write(url + "\n")
-
+#This set of code is designed to read the urls line by line.
 
 if __name__ == "__main__":
     ROOT_PATH = os.path.dirname(__file__)
