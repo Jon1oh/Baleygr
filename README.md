@@ -42,11 +42,11 @@ pip install selenium
 
 # Usage
 
-For the usage of our progam, the first step would be to generate the urls that are associated with governmental organizations. This is executed with the use of the gov_gen.py file.
+For the usage of our progam, the first step would be to generate the urls that are associated with governmental organizations. This is executed with the use of the gov_gen.py file. The urls from this output will be uploaded in gov-urls.txt.
 
-The second step would be to generate the different possible malicious sites that might be attempting to replicate sites under the jurisdiction and usage of the Singapore Government. This done through the use of generator.py python file.
+The second step would be to generate the different possible malicious sites that might be attempting to replicate sites under the jurisdiction and usage of the Singapore Government. This done through the use of generator.py python file. The urls generated from this file is appended to urls.txt.
 
-The third step would be to obtain the screenshots of sites that have been identified as malicious. This is done through the crawler.py file. 
+The third step would be to obtain the screenshots of sites that have been identified as malicious. This is done through the crawler.py file. The screenshots are uploaded to the screenshots folder.
 
 The final step in the program would be to classify the screenshots that are obtained into different categories. This action is performed ith the classifier.py file.
 
