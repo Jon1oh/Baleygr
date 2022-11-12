@@ -7,11 +7,7 @@
         "http://www.htx.news/",
         "http://www.sla.mx/",
         "http://www.dsta.mx/",
-        "http://www.mas.support/",
-        "http://www.mha.eu/",
-        "http://www.nyp.li/",
-        "http://www.lta.sk/",
-        "http://www.msf.hk/"
+        "http://www.mas.support/"
     ],
     "Offensive Content": [
         "https://www.pmo.dev/",
@@ -20,12 +16,7 @@
         "http://www.ptc.support/",
         "http://www.pa.dev/",
         "http://www.caas.mx/",
-        "http://www.mpa.email/",
-        "http://www.psc.travel/",
-        "http://www.ura.ws/",
-        "http://www.psc.fashion/",
-        "http://www.judiciary.ws/",
-        "http://www.bca.coop/"
+        "http://www.mpa.email/"
     ],
     "Cyber Malicious": [
         "http://www.ite.support/",
@@ -35,14 +26,7 @@
         "http://www.mom.shop/",
         "http://www.ipos.shop/",
         "http://www.pa.support/",
-        "http://www.pub.dev/",
-        "http://www.ipos.cn/",
-        "http://www.sp.tel/",
-        "https://www.sdc.ca/",
-        "http://www.mot.fi/",
-        "http://www.moh.ie/",
-        "http://www.pub.site/",
-        "http://www.seab.se/"
+        "http://www.pub.dev/"
     ],
     "Scam / Phishing": [
         "http://www.mti.news/",
@@ -54,14 +38,7 @@
         "http://www.mom.mx/",
         "http://www.msf.mx/",
         "http://www.hdb.mx/",
-        "http://www.imda.mx/",
-        "https://www.pmo.it/",
-        "http://www.sfa.com/",
-        "https://www.snb.us/",
-        "http://www.pa.ms/",
-        "https://www.edb.eu/",
-        "http://www.mti.me/",
-        "http://www.lta.sk/"
+        "http://www.imda.mx/"
     ],
     "Potentially Illegal Activity": [
         "http://www.hsa.dev/",
@@ -75,11 +52,7 @@
         "http://www.gra.mx/",
         "http://www.sfa.news/",
         "http://www.sp.support/",
-        "http://www.sla.support/",
-        "http://www.nlb.sg/",
-        "http://www.rp.services/",
-        "http://www.msf.help/",
-        "http://www.parliament.tj/"
+        "http://www.sla.support/"
     ],
     "Hate Speech": [
         "http://www.moh.dev/",
@@ -89,8 +62,7 @@
         "http://www.mpa.mx/",
         "http://www.mha.news/",
         "http://www.bca.news/",
-        "http://www.iseas.shop/",
-        "http://www.sp.network/"
+        "http://www.iseas.shop/"
     ],
     "Violence": [
         "http://www.mnd.news/",
@@ -100,14 +72,7 @@
         "http://www.rp.dev/",
         "http://www.hpb.email/",
         "http://www.science.blog/",
-        "http://www.sp.dev/",
-        "http://www.seab.ws/",
-        "http://www.mpa.movie/",
-        "http://www.mci.edu/",
-        "http://www.science.cc/",
-        "http://www.jtc.mobi/",
-        "http://www.rp.management/",
-        "http://www.hpb.io/"
+        "http://www.sp.dev/"
     ],
     "Sexual Content": [
         "http://www.mfa.mx/",
@@ -115,22 +80,11 @@
         "http://www.ipos.mx/",
         "http://www.nhb.media/",
         "http://www.ptc.news/",
-        "http://www.sfa.wiki/",
-        "http://www.nea.no/",
-        "http://www.nea.me/",
-        "http://www.htx.ir/",
-        "http://www.mpa.so/"
+        "http://www.sfa.wiki/"
     ],
     "Other": [
         "http://www.boa.support/",
         "http://www.boa.media/",
-        "http://www.science.dev/",
-        "http://www.jtc.expert/",
-        "http://www.hlb.org/",
-        "http://www.hdb.london/",
-        "http://www.agc.live/",
-        "http://www.iac.ws/",
-        "http://www.agc.af/",
-        "http://www.htx.net/"
+        "http://www.science.dev/"
     ]
 }
