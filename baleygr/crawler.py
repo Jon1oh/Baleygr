@@ -9,6 +9,7 @@ from logger import crawler_logger as logging
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
+
 SRC_PATH = os.path.join(os.path.dirname(__file__), "resources")
 URL_PATH = os.path.join(SRC_PATH, "urls.txt")
 SS_PATH = os.path.join(SRC_PATH, "screenshots")
